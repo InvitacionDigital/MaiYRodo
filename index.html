@@ -26,16 +26,17 @@
                     day = hour * 24;
 
 
-                const birthday = "11/09/2023";
+                const birthday = "11/10/2023";
+                const birthday2 = "2023-11-10T20:00:00"
 
   
-  const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
+    const countDown = new Date(birthday2).getTime()
+    x = setInterval(function() {    
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+        const now = new Date().getTime()
+        distance = countDown - now;
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("days").innerText = Math.floor(distance / (day)),
           document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
           document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
@@ -44,7 +45,7 @@
         if (distance < 0) {
           clearInterval(x);
         }
-      }, 0)
+      }, second)
   }());
             window._wpemojiSettings = {
                 "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/",
